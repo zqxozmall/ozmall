@@ -3,4 +3,4 @@ ozmall
 
 ozmall
 
-this is ozmall readme
+this is ozmall readme updated from local
