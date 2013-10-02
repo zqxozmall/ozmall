@@ -729,7 +729,7 @@ input[type=radio]:checked+label.ui-radio-status {
 }
 
 .ui-icon-searchfield {
-	background-image: url(images/icon-search-black.png);
+	/*background-image: url(images/icon-search-black.png);*/
 	background-size: 1em 1em
 }
 
@@ -1834,8 +1834,9 @@ input.ui-input-text,textarea.ui-input-text,.ui-input-search {
 }
 
 div.ui-input-search input.ui-input-text {
-	margin-left: 2em;
-	width: 87%
+	margin-left: 0.5em;
+	width: 87%;
+	margin-top: 0.5em;
 }
 
 .ui-listview {
