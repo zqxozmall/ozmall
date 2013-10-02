@@ -37,9 +37,10 @@
 <div class="w_opacity1" id="mengban" style="display:none;"></div>
 <div id="header" data-role="header" class="ui-header ui-bar-a ui-header-fixed ui_title">
 	<!-- <div class="ui-btn ui-btn-limit ui-btn-right ui-btn-iphone"> <div class="ui-btn-apple-nl"><div class="ui-btn-apple-nr"><div class="ui-btn-apple-nc"> <span class="ui-btn-inner "> <span class="ui-btn-text">登陆</span>  </span>  </div></div></div></div> --> 
+<!--
 	<h1 class="ui-title title_top" tabindex="0" role="heading" aria-level="1" id="title_name" style="margin: .5em 3em .5em !important;">	OZMALL
 		　
-	</h1>
+	</h1>-->
 <!-- 	<div id="noLogin_id" class="ui-btn ui-btn-limit ui-btn-right ui-btn-iphone"> -->
 <!-- 		<div class="ui-btn-apple-nl"> -->
 <!-- 			<div class="ui-btn-apple-nr"> -->
@@ -56,15 +57,25 @@
 	<div id="login_id"  style="display:none;" class="username_box"><span class="username_dwx" id="userName_id_" onclick="uexWindow.open('mymall_userinfo', '0', 'mymall_userinfo.html', '2', '', '','0');"></span></div>
 	
 	<div class="search_dwx">
+		<div class="logo_dwx">
+			<img src="css/images/OZMALL_LOGO_150x68px.png" width ="100">
+		</div>
+			
+			
 			<div class="ui-input-search ui-shadow-inset ui-corner-all ui-btn-shadow ui-icon-searchfield ui-body-d ui-corner-all-d float_d ui_input_search">
 				<input placeholder="搜索商品" type="text" name="search-3" id="search-3" value="" class="ui-input-text ui-body-null ui-search-width-sy" style="width:82%;background:transparent"/>
+			<div data-role="button" id="ss" ontouchstart="t_m_start2(this.id)" ontouchmove="t_m_move2(this.id)" ontouchend="t_m_end2(this.id)" onclick=" var v = $id('search-3').value;uexWindow.evaluateScript('','0','search(\''+v+'\')')" class="search_img"> 
+			<span class="ui-btn-inner ui-corner-all www_padding">
+				 <img src="css/images/icon-search-black.png">
+				 </span>
+				 </div> 
 			</div>
 <!-- 			<div data-role="button" onclick="var v = $id('search-3').value;uexWindow.evaluateScript('','0','search(\''+v+'\')')" class="ui-btn-corner-all ui-btn ui-btn-a  ui-btn-inline ui-shadow ui_btn_b_dwx ui_btn_dwx ui_shadow_dwx float_d"> -->
 <!-- 				<span class="ui-btn-inner ui-corner-all ui-btn-inner-dwx"> -->
 <!-- 					<span class="ui-btn-text">搜索</span> -->
 <!-- 				</span> -->
 <!-- 			</div> -->
-			<div data-role="button" id="ss" ontouchstart="t_m_start2(this.id)" ontouchmove="t_m_move2(this.id)" ontouchend="t_m_end2(this.id)" onclick=" var v = $id('search-3').value;uexWindow.evaluateScript('','0','search(\''+v+'\')')" class=" ui-corner-all ui-btn ui-btn-limit ui-bar-a   ui-shadow w_search_btn111 w_head_btn ui-btn-search"> <span class="ui-btn-inner ui-corner-all www_padding"> <span class="ui-btn-text">搜索</span> </span></div> 
+
 
 			<div style="clear:both;"></div>
 		</div>
@@ -96,7 +107,7 @@
 		<div class="ui-collapsible-contain ui_collapsible_contain_dwx position_dwx" id="type_best">
 				<input type="checkbox" class="custom ui-hide">
 				<label onclick="zy_for(event,zy_fold)" class="ui-collapsible-heading ui-btn ui-btn-icon-right ui-shadow ui-corner-top ui_collapsible_heading ui_shadow_d title_bg_dwx">
-					<span class="ui-icon ui-icon-shadow ui-collapsible-icon abc_home"></span>
+					<span class="ui-icon ui-collapsible-icon "></span>
 					<span class="ui-btn-inner ui-corner-top ui_btn_inner jp_tit666">
 					<span class="ui-btn-text">精品推荐  <em>Best Item　</em></span>
 					</span>
@@ -118,7 +129,7 @@
 			<div class="ui-collapsible-contain ui_collapsible_contain_dwx position_dwx" id="type_new">
 				<input type="checkbox" class="custom ui-hide" >
 				<label onclick="zy_for(event,zy_fold)" class="ui-collapsible-heading ui-btn ui-btn-icon-right ui-shadow ui-corner-top [ui-btn-up-c] ui_collapsible_heading ui_shadow_d title_bg_dwx">
-					<span class="ui-icon ui-icon-shadow ui-collapsible-icon abc_home"></span>
+					<span class="ui-icon  ui-collapsible-icon "></span>
 					<span class="ui-btn-inner ui_btn_inner">
 						<span class="ui-btn-text">新品上市  <em>New Item　</em></span>
 					</span>
@@ -139,7 +150,7 @@
 			<div class="ui-collapsible-contain ui_collapsible_contain_dwx position_dwx" id="type_hot">
 				<input type="checkbox" class="custom ui-hide" >
 				<label onclick="zy_for(event,zy_fold)" class="ui-collapsible-heading ui-btn ui-btn-icon-right ui-shadow ui-corner-top [ui-btn-up-c] ui_collapsible_heading ui_shadow_d title_bg_dwx">
-					<span class="ui-icon ui-icon-shadow ui-collapsible-icon abc_home"></span>
+					<span class="ui-icon  ui-collapsible-icon "></span>
 					<span style="padding-right:6.5em;" class="ui-btn-inner ui_btn_inner">
 						<span class="ui-btn-text" >热卖商品  <em>Hot Izzues</em></span>
 					</span>
@@ -160,7 +171,7 @@
 			 <div class="ui-collapsible-contain ui_collapsible_contain_dwx position_dwx" id="type_brand">
 				<input type="checkbox" class="custom ui-hide" >
 				<label onclick="zy_for(event,zy_fold)" class="ui-collapsible-heading ui-btn ui-btn-icon-right ui-shadow ui-corner-top [ui-btn-up-c] ui_collapsible_heading ui_shadow_d title_bg_dwx">
-					<span class="ui-icon ui-icon-shadow ui-collapsible-icon abc_home"></span>
+					<span class="ui-icon  ui-collapsible-icon "></span>
 					<span class="ui-btn-inner ui-corner-bottom ui_btn_inner">
 						<span class="ui-btn-text">品牌专区  <em>Brands　　</em></span>
 					</span>
