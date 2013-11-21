@@ -57,7 +57,7 @@
 	<div id="login_id"  style="display:none;" class="username_box"><span class="username_dwx" id="userName_id_" onclick="uexWindow.open('mymall_userinfo', '0', 'mymall_userinfo.html', '2', '', '','0');"></span></div>
 	
 	<div class="search_dwx" >
-		<div class="logo_dwx"  style="width:30%">
+		<div class="logo_dwx"  style="width:30%" >
 			<img src="css/images/OZMALL_LOGO_150x68px.png" width="99%">
 		</div>
 			
@@ -69,7 +69,7 @@
 				 <img src="css/images/icon-search-white.png">
 				 </span>
 				 </div> 
-			</div>
+			</div>						
 <!-- 			<div data-role="button" onclick="var v = $id('search-3').value;uexWindow.evaluateScript('','0','search(\''+v+'\')')" class="ui-btn-corner-all ui-btn ui-btn-a  ui-btn-inline ui-shadow ui_btn_b_dwx ui_btn_dwx ui_shadow_dwx float_d"> -->
 <!-- 				<span class="ui-btn-inner ui-corner-all ui-btn-inner-dwx"> -->
 <!-- 					<span class="ui-btn-text">搜索</span> -->
@@ -228,7 +228,7 @@
 	var brandsFlip = null;
 	var titleName = "";
 	var isDel = 0;//The flag of file
-	var check_flag = '';
+	var check_flag = '';			//打开商品分类列表页面	function openSortShop(id,goods_name){		var html_url = "sort_shop.html?id="+id+"&goods_name="+goods_name;		uexWindow.open("sort_shop", '0', html_url, '2', '', '', 0x0);		//openNewWin("sort_shop",html_url,'2');	}
 	function goToMymall(){
 		isDel = 2;
 		uexFileMgr.isFileExistByPath("wgt://data/uesrInfo.txt");
@@ -536,7 +536,7 @@
 					len = s.length;
 					for(var i=0;i<s.length;i++){
                     	//section_list +=	'<div onclick="openWapUrl(\''+s[i].url+'\')" class="item"><section style="background:url(\''+image_url+s[i].src+'\') no-repeat; border-radius: .5em !important;"></section></div>'
-						section_list += '<div onclick="openWapUrl(\''+s[i].url+'\')" style="background:url(\''+image_url+s[i].src+'\');" class="ui-flip-section ui-ad-bc"></div>';
+						section_list += '<div onclick="'+s[i].url+'" style="background:url(\''+image_url+s[i].src+'\');" class="ui-flip-section ui-ad-bc"></div>';
 						if(i == 0){
 							point_list += '<li class="w_order_show" id="point_'+i+'"><span></span></li>';
 						}else{
