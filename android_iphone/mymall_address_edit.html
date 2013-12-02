@@ -145,21 +145,22 @@
 			</li> 
 			<li class=" ui-body-b ui-li-static ui-li ui_body_b_dwx ui_li_dwx_bj ui_li_ddwx">
 				<div class="ui-has-label">
-					<label for="text-0" class="ui-input-text ui_input_text" >电话:</label>
+					<label for="text-0" class="ui-input-text ui_input_text" >手机:</label>
 					<input placeholder="" name="text-0" id="textTell"  type="text" value="" class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-btn-d ui_input_text_left" />
 				</div>
 			</li> 
 			<li class=" ui-body-b ui-li-static ui-li ui_body_b_dwx ui_li_dwx_bj ui_li_ddwx">
 				<div class="ui-has-label">
-					<label for="text-0" class="ui-input-text ui_input_text" >手机:</label>
+					<label for="text-0" class="ui-input-text ui_input_text" >电话:</label>
 					<input placeholder="" name="text-0" id="textMobile"  type="text" value="" class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-btn-d ui_input_text_left" />
 				</div>
 			</li>
+<!--
 	        <li class=" ui-body-b ui-corner-bottom ui-li-static ui-li ui_body_b_dwx ui_li_dwx_bj ui_li_ddwx">
 				<div class="ui-has-label">
 					<label for="text-0" class="ui-input-text ui_input_text" >送货时间:</label>
 					<!--  <input placeholder="" name="text-0" id="textTime"  type="text" value="1856975520" class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-btn-d ui_input_text_left" />-->
-					<div class="ui-select">
+	<!--				<div class="ui-select">
 	                    <div style="margin: .5em -0.9em .5em 0.3em" class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-btn-c">
 	                        <span class="ui-btn-inner ui-btn-corner-all hi-btn-inner ui-btn-inner-ddddwx" > 
 	                            <span id="time_id" class="ui-btn-text">任意时间</span>
@@ -176,6 +177,7 @@
 					</div>
 				</div>
 			</li>
+-->
 		</ul>
 		<div class="btn-style-sy">
 			<div class="li_button btn-style-sy-" >
@@ -281,20 +283,23 @@ function modityAddress(){
 		uexWindow.alert("提示","请填写正确的邮编！","确定");return;
 	}
 	var newTel = $id("textTell").value;
-	if(!(/^(\d{3,4}[-|/])*\d{6,8}$/.test(newTel))){
-		uexWindow.alert("提示","请填写正确的电话号码！","确定");
+	if(newTel == ""){
+		uexWindow.alert("提示","请填写详细的手机号码！","确定");
 		return;
 	}
 	var newMob = $id("textMobile").value;
+/*
 	if(!(/^1[3|5|8]\d{4,9}$/.test(newMob))){
 		uexWindow.alert("提示","请填写正确的手机号码！","确定");return;
-	}
+	}*/
+/*
 	var newTime = $id("textTime").value;
 	if(newTime == ""){
 		uexWindow.alert("提示","请填写配送时间！","确定");
 		return;
-	}
-	var modityUrl = httpUrl + 'user.php?jsoncallback=?&act=act_edit_address&address_id='+addid+'&country='+encodeURI(conval)+'&province='+encodeURI(proval)+'&city='+encodeURI(cityval)+'&district='+encodeURI(disval)+'&address='+encodeURI(newAddress)+'&consignee='+encodeURI(newName)+'&email='+encodeURI(newEmail)+'&tel='+encodeURI(newTel)+'&mobile='+encodeURI(newMob)+'&best_time='+encodeURI(newTime)+'&zipcode='+encodeURI(newZip);
+	}*/
+	//var modityUrl = httpUrl + 'user.php?jsoncallback=?&act=act_edit_address&address_id='+addid+'&country='+encodeURI(conval)+'&province='+encodeURI(proval)+'&city='+encodeURI(cityval)+'&district='+encodeURI(disval)+'&address='+encodeURI(newAddress)+'&consignee='+encodeURI(newName)+'&email='+encodeURI(newEmail)+'&tel='+encodeURI(newTel)+'&mobile='+encodeURI(newMob)+'&best_time='+encodeURI(newTime)+'&zipcode='+encodeURI(newZip);
+	var modityUrl = httpUrl + 'user.php?jsoncallback=?&act=act_edit_address&address_id='+addid+'&country='+encodeURI(conval)+'&province='+encodeURI(proval)+'&city='+encodeURI(cityval)+'&district='+encodeURI(disval)+'&address='+encodeURI(newAddress)+'&consignee='+encodeURI(newName)+'&email='+encodeURI(newEmail)+'&tel='+encodeURI(newTel)+'&mobile='+encodeURI(newMob)+'&zipcode='+encodeURI(newZip);
 	xmlHttp(33,modityUrl);
 }
 
