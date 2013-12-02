@@ -152,19 +152,8 @@
 		uexXmlHttpMgr.onData = function(opCode,type,result){
 			
 			if(type == 1){
-				/*var res = (result.substr(result.indexOf("?(")+2,result.length)).substr(0,result.length-3); 
-				var s = JSON.parse(res);
-				uexWindow.closeToast();
-				uexXmlHttpMgr.close(opCode);
-				for(o in s){
-					sort_list += '<li class="ui-btn-d  ui-btn-icon-right   ui-li ui-li-font-color" onclick="openSortShop('+s[o].id+')">'+
-					'<div class="ui-btn-text ui-li ui-btn-inner"><div class="ui-link-inherit font-color ui-li-font">'+
-					'<h3 class="ui-li-heading li-font-color">'+s[o].name+' </h3></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span></div></li>';
-				}
-				$id("sort_ul").innerHTML = sort_list;*/
 				if(opCode == 1){
-					var res = (result.substr(result.indexOf("?(")+2,result.length)).substr(0,result.length-3); 
-					//alert(res);
+					var res = (result.substr(result.indexOf("?(")+2,result.length)).substr(0,result.length-3); 					
 					var s = JSON.parse(res);
 					uexWindow.closeToast();
 					uexXmlHttpMgr.close(opCode);
