@@ -316,8 +316,8 @@ div.ui_input_search input.ui_input_text {
 .ui-collapsible-content {
 	background:-webkit-gradient(linear, left top, left bottom, from(#f6f6f6),to(#f6f6f6));
 	margin: -1px 6px 0 6px;
-	border-left:1px #525353 solid;
-	border-right:1px #525353 solid;
+/*	border-left:1px #525353 solid;
+	border-right:1px #525353 solid;*/
 }
 .ui_collapsible_set_dwx {
 	margin: 0 0 0.5em 0;
