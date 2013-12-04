@@ -578,10 +578,10 @@ div.ui_input_search input.ui_input_text {
 	position: relative;
 }
 .box_zt_bg {
-	border-radius: 1em;
-	border: 2px solid #ccc;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f69da2), to(#d7070d));
-	width: 3.5em;
+	border-radius: 0.5em;
+/*	border: 2px solid #ccc;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f69da2), to(#d7070d));*/
+	background: #DF084E;	border: 1px solid #003366;	width: 3.5em;
 	padding: .2em;
 	position: absolute;
 	top: 1em;
