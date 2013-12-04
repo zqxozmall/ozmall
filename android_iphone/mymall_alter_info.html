@@ -42,7 +42,7 @@
 				<div class="ui-has-label">
 					<label for="text-0" class="ui-input-text ui_input_text">配送区域:</label>
 					<div class="quyu_select">
-					<div class="ui-select">
+					<div class="ui-select" style="display: none;">
 						<div  class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-btn-c">
 							<span class="ui-btn-inner ui-btn-corner-all hi-btn-inner ui-btn-inner-ddddwx" > 
 								<span id="country_id" class="ui-btn-text">请选择</span>
@@ -325,12 +325,13 @@ function httpSuccess(opid,status,result){//status 状态 0 接收，1完成
 			var res = (result.substr(result.indexOf("?(")+2,result.length)).substr(0,result.length-3);
 			var coun_arr = JSON.parse(res);
 			uexXmlHttpMgr.close(opid);
-			var cou_str = '<option value="-1">请选择</option>';
+			var cou_str = '<option value="3409">请选择</option>';
 			for(var i = 0; i < coun_arr.length; i++){;
 				var coun_obj = coun_arr[i];
 				cou_str += '<option value="'+coun_obj.region_id+'">'+coun_obj.region_name+'</option>';
 			}
 			$id("select-choice-1").innerHTML = cou_str;
+			getCitys(10,1,3409);
 		}
 	}
 	//uexXmlHttpMgr.close(opid);
