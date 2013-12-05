@@ -2288,4 +2288,4 @@ input[type=checkbox]:checked+label.ui-slider-label-bg{
 .ui-float-right
 {
 	float:right !important;
-}
+}#bonus_title {display:block; float:left; color:#000;}
