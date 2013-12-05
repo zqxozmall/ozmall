@@ -1,103 +1,29 @@
 <!DOCTYPE html>
-<html class="ui-mobile landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
-  <head>
-    <title>
-    </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="target-densitydpi=device-dpi,width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/ui-media.css">
-	<link rel="stylesheet" href="css/ui-base.css">
-	<link rel="stylesheet" href="css/ui-apple.css">
-	<link rel="stylesheet" href="css/ui-new.css">
-	<link rel="stylesheet" href="css/s_style.css">
-	<link rel="stylesheet" href="css/h_style.css">
-	<link rel="stylesheet" href="css/w_style.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/zy_anim.js">
-    </script>
-    <script src="js/zy_control.js">
-    </script>
- 	<script src="js/zy_tmpl.js">
-    </script>
-     <script type="text/javascript" src="js/config.js"></script>
+<html class="ui-mobile landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">  <head>    <title>    </title>    <meta charset="utf-8">    <meta name="viewport" content="target-densitydpi=device-dpi,width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">    <link rel="stylesheet" href="css/ui-media.css">	<link rel="stylesheet" href="css/ui-base.css">	<link rel="stylesheet" href="css/ui-apple.css">	<link rel="stylesheet" href="css/ui-new.css">	<link rel="stylesheet" href="css/s_style.css">	<link rel="stylesheet" href="css/h_style.css">	<link rel="stylesheet" href="css/w_style.css">	<link rel="stylesheet" href="css/style.css">	<script src="js/zy_anim.js">    </script>	<script src="js/zy_control.js">    </script> 	<script src="js/zy_tmpl.js">    </script>
+    <script type="text/javascript" src="js/config.js"></script>
   </head>
-  <body class="ui-mobile-viewport ui_body_d" >
-   
-<!-- 
-<div data-role="header" class="ui-header ui-bar-a ui-header-fixed ui-bar-glass " >
-<div  class="ui-btn  ui-btn-left  ui-btn-corner-all ui-shadow  ui-btn-c  ">  <span class="ui-btn-inner ui-btn-corner-all"> <span class="ui-btn-text">返回</span>  </span> <button class="ui-btn-hidden"></button> </div>
-<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">
-订单详情
-</h1> 
-</div>-->
-
-<div id="header" data-role="header" class="ui-header ui-bar-a ui-header-fixed  h_t_color ui_title" >
-<!-- <div onclick="uexWindow.close('-1');" class="ui-btn ui-btn-limit ui-btn-left ui-btn-iphone"> <div class="ui-btn-apple-nl"><div class="ui-btn-apple-nr"><div class="ui-btn-apple-nc"> <span class="ui-btn-inner "> <span  id="btn_c" class="ui-btn-text">返回</span>  </span>  </div></div></div></div> -->
-<div onClick="uexWindow.evaluateScript('','0','uexWindow.close(\'-1\')')" id="fh" ontouchstart="t_m_start(this.id)" ontouchmove="t_m_move(this.id)" ontouchend="t_m_end(this.id)" data-role="button" class="ui-btn-left ui-btn-corner-all ui-btn ui-btn-limit ui-bar-a   ui-shadow w_head_btn"> <span class="ui-btn-inner ui-btn-corner-all www_padding"> <span id="btn_c" class="ui-btn-text">返回</span> </span></div> 
-
-<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">
-我的订单
-</h1> 
-<!-- <div id="pay_id" style="display:block;" onclick="pay()" class="ui-btn ui-btn-limit ui-btn-right ui-btn-iphone"><div class="ui-btn-apple-nl"><div class="ui-btn-apple-nr"><div class="ui-btn-apple-nc"> <span class="ui-btn-inner "> <span class="ui-btn-text">付款</span></span></div></div></div></div>  -->
-<!-- <div id="pay_id" onclick="pay()" ontouchstart="t_m_start_right(this.id)" ontouchmove="t_m_move_right(this.id)" ontouchend="t_m_end_right(this.id)" data-role="button" class="ui-btn-right ui-btn-corner-all ui-btn ui-btn-limit ui-bar-a   ui-shadow w_head_btn"> <span class="ui-btn-inner ui-btn-corner-all www_padding"> <span class="ui-btn-text">付款</span> </span></div>-->
- 
-	
-</div>
-
-<div id="page_1" class="ui-page ui-body-a ui-page-active" tabindex="0" style="background:#ffffff">
-<div class="ui-content ui-body-a ui-fixed-top h_cn_color">
-
-<div>
-<h3 style="color:#000;padding-top:0.5em;">订单状态</h3>
-<div class="ui-bar ui-bar-d ui-corner-all h-con-w">
-	订单号:<span id="orderNum"></span> <br/>
-	订单状态：<span id="orderSta"></span><br/>
-	付款状态：<span id="orderMoney"></span><br/>		立即支付：<span id="paynow"></span>
-	配送状态：<span id="orderSend"></span><br/>
-</div>
-</div>
-
-<h3 style="color:#000;padding-top:0.5em;">订单信息</h3> 
-
-<div class="ui-bar ui-bar-d ui-corner-all h_cu_color ui-body_h">
-<div id="list_id"></div>
-
-<p style="color:#000;" class="title-hyc">配送方式：</p>
-<div id="ship5" style="display:block;" class="ui-radio ui-radio-hyc"><input type="radio" name="" class="ui-hide" checked="checked" id="radio-0-1" value=""><label onclick="zy_for(event);selectSend(1)" class="ui-btn ui-btn-icon-right ui-corner-top ui-btn-d ui-btn-d-hyc"><label class="ui-icon ui-icon-radio ui-icon-shadow ui-icon-hyc"></label><span class="ui-btn-inner ui-btn-inner-hyc">  <span class="ui-btn-text" id="psfs_"></span></span></label></div>
-<div id="ship3" style="display:none;" class="ui-radio ui-radio-hyc"><input type="radio" name="" class="ui-hide" checked="checked" id="radio-0-2" value=""><label onclick="zy_for(event);selectSend(2)" class="ui-btn ui-btn-icon-right  ui-btn-d ui-btn-d-hyc"><label class="ui-icon ui-icon-radio ui-icon-shadow ui-icon-hyc"></label><span class="ui-btn-inner ui-btn-inner-hyc">  <span class="ui-btn-text">城际快递:10.0元 </span></span></label></div>
-<div id="ship6" style="display:none;" class="ui-radio ui-radio-hyc"><input type="radio" name="" class="ui-hide" checked="checked" id="radio-0-3" value=""><label onclick="zy_for(event);selectSend(3)" class="ui-btn ui-btn-icon-right ui-controlgroup-last ui-corner-bottom ui-btn-d ui-btn-d-hyc"><label class="ui-icon ui-icon-radio ui-icon-shadow ui-icon-hyc"></label><span class="ui-btn-inner ui-btn-inner-hyc">  <span class="ui-btn-text">邮局平邮:3.5&nbsp;&nbsp;元 </span></span></label></div>
-
-<li class=" ui-body-d     ui-corner-bottom  ui-li-static  ui-li  ui-corner-f ui-field-f" style="border-bottom-width: 0px !important">
-	<div class="ui-li-hs" >
-		<div id="price_num"></div>
-		<div style="color:#f00;text-align: right;">应付款金额:&nbsp;&nbsp;  <span id="all_price"></span></div>
-	</div> 
-</li>
-</div>
-<br/>
-<div  class="ui-btn-center" tabindex="0"> 
-<!-- <div onclick="submit_order()" data-role="button" class=" ui-corner-all ui-btn  ui-btn-d   ui-shadow h-wei-s"> <span class="ui-btn-inner ui-corner-all"> <span class="ui-btn-text">提交订单</span> </span></div>  -->
-
-
-<h3 style="color:#000;">收货地址</h3>
-<!--<div onclick="modityAddress();" class="h-mod-st">修改</div>-->
-<div class="ui-bar ui-bar-d ui-corner-all h-con-w" id="address_id">
-</div>
-
-</div>
-</div>
-</div>
-<script type="text/javascript" src="js/zy_json.js"></script>
-<script type="text/javascript" src="js/h_main.js"></script>
-<script type="text/javascript">
-	var all_money = 0;
-	var orderName = '';
-	/*付款*/
-	function pay(){
-		uexPay.pay(orderName, orderName, inBody, all_money);
-		//	uexPay.pay(number_, number_, number_, '0.01');
-	}
-	
+  <body class="ui-mobile-viewport ui_body_d" >	<div id="header" data-role="header" class="ui-header ui-bar-a ui-header-fixed  h_t_color ui_title" >	<div onClick="uexWindow.evaluateScript('','0','uexWindow.close(\'-1\')')" id="fh" ontouchstart="t_m_start(this.id)" ontouchmove="t_m_move(this.id)" ontouchend="t_m_end(this.id)" data-role="button" class="ui-btn-left ui-btn-corner-all ui-btn ui-btn-limit ui-bar-a   ui-shadow w_head_btn"> <span class="ui-btn-inner ui-btn-corner-all www_padding"> <span id="btn_c" class="ui-btn-text">返回</span> </span></div> 	<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">我的订单</h1> 	</div>
+	<div id="page_1" class="ui-page ui-body-a ui-page-active" tabindex="0" style="background:#ffffff">
+	<div class="ui-content ui-body-a ui-fixed-top h_cn_color">
+	<div>		<h3 style="color:#000;padding-top:0.5em;">订单状态</h3>		<div class="ui-bar ui-bar-d ui-corner-all h-con-w">			订单号:<span id="orderNum"></span> <br/>			订单状态：<span id="orderSta"></span><br/>			付款状态：<span id="orderMoney"></span><br/>			立即支付：<span id="paynow"></span>			配送状态：<span id="orderSend"></span><br/>		</div>	</div>
+	<h3 style="color:#000;padding-top:0.5em;">订单信息</h3> 
+	<div class="ui-bar ui-bar-d ui-corner-all h_cu_color ui-body_h">
+	<div id="list_id"></div>
+	<p style="color:#000;" class="title-hyc">配送方式：</p>	<div id="ship5" style="display:block;" class="ui-radio ui-radio-hyc"><input type="radio" name="" class="ui-hide" checked="checked" id="radio-0-1" value=""><label onclick="zy_for(event);selectSend(1)" class="ui-btn ui-btn-icon-right ui-corner-top ui-btn-d ui-btn-d-hyc"><label class="ui-icon ui-icon-radio ui-icon-shadow ui-icon-hyc"></label><span class="ui-btn-inner ui-btn-inner-hyc">  <span class="ui-btn-text" id="psfs_"></span></span></label></div>	<div id="ship3" style="display:none;" class="ui-radio ui-radio-hyc"><input type="radio" name="" class="ui-hide" checked="checked" id="radio-0-2" value=""><label onclick="zy_for(event);selectSend(2)" class="ui-btn ui-btn-icon-right  ui-btn-d ui-btn-d-hyc"><label class="ui-icon ui-icon-radio ui-icon-shadow ui-icon-hyc"></label><span class="ui-btn-inner ui-btn-inner-hyc">  <span class="ui-btn-text">城际快递:10.0元 </span></span></label></div>
+	<div id="ship6" style="display:none;" class="ui-radio ui-radio-hyc"><input type="radio" name="" class="ui-hide" checked="checked" id="radio-0-3" value=""><label onclick="zy_for(event);selectSend(3)" class="ui-btn ui-btn-icon-right ui-controlgroup-last ui-corner-bottom ui-btn-d ui-btn-d-hyc"><label class="ui-icon ui-icon-radio ui-icon-shadow ui-icon-hyc"></label><span class="ui-btn-inner ui-btn-inner-hyc">  <span class="ui-btn-text">邮局平邮:3.5&nbsp;&nbsp;元 </span></span></label></div>	<li class=" ui-body-d     ui-corner-bottom  ui-li-static  ui-li  ui-corner-f ui-field-f" style="border-bottom-width: 0px !important">	
+		<div class="ui-li-hs" >	
+			<div id="price_num"></div>
+			<div style="color:#f00;text-align: right;">应付款金额:&nbsp;&nbsp;  <span id="all_price"></span></div>
+		</div> 
+	</li>
+</div><br/><div  class="ui-btn-center" tabindex="0"> <h3 style="color:#000;">收货地址</h3><div class="ui-bar ui-bar-d ui-corner-all h-con-w" id="address_id"></div></div></div></div>
+<script type="text/javascript" src="js/zy_json.js"></script><script type="text/javascript" src="js/h_main.js"></script><script type="text/javascript">
+	var all_money = 0;
+	var orderName = '';
+	/*付款*/
+	function pay(){
+		uexPay.pay(orderName, orderName, inBody, all_money);
+	}
 	/*取回数据并进行处理*/
 	function httpSuccess(opid,status,result){//status 状态 0 接收，1完成
 		if(status == 1){uexWindow.closeToast();
@@ -138,18 +64,13 @@
 						case '4':ostr = "退款";break;
 						default:break;
 					}
-					/*if(os != 1){
-						$id("fk").style.display = "none";
-					}*/
 					$id("orderSta").innerHTML = ostr;
 					var mstr = "";
 					var ms = order_obj.pay_status;
 					switch(ms){
-						case '0':mstr = "未付款";
-					//	$id("pay_id").style.display = "block";
-						break;
-						case '1':mstr = "付款中";break;
-						case '2':mstr = "已付款";break;						
+						case '0':mstr = "未付款";								$id("paynow").innerHTML = order_obj.paynow;								break;
+						case '1':mstr = "付款中";						         $id("paynow").innerHTML = order_obj.paynow;								 break;
+						case '2':mstr = "已付款";								$id("paynow").innerHTML = "<span>已付款<span><br>";								break;						
 						default:break;
 					}
 					$id("orderMoney").innerHTML = mstr;
@@ -166,18 +87,9 @@
 					
 					//配送方式
 					var pf = order_obj.shipping_id;		
-					/*switch(pf){
-						case '5':$id("ship5").style.display = 'block';break;
-						case '3':$id("ship3").style.display = 'block';break;
-						case '6':$id("ship6").style.display = 'block';break;						
-						default:break;
-					}*/
-					$id("psfs_").innerHTML = order_obj.shipping_name + ":" + order_obj.formated_shipping_fee;
-					
-					//价钱
-					$id("price_num").innerHTML = "总价："+order_obj.formated_goods_amount+" + 运费：<span id='send_id'>"+order_obj.formated_shipping_fee+"</span>";
-					$id("all_price").innerHTML = order_obj.formated_order_amount;					$id("paynow").innerHTML = order_obj.paynow;
-					
+					$id("psfs_").innerHTML = order_obj.shipping_name + ":" + order_obj.formated_shipping_fee;					//价钱
+					$id("price_num").innerHTML = "总价："+order_obj.formated_goods_amount											   + " + 运费：<span id='send_id'>"+order_obj.formated_shipping_fee+"</span>"											   + " + 支付附加收费：<span id='send_id'>"+order_obj.formated_pay_fee+"</span>"											   + " - 红包：<span id='send_id'>"+order_obj.formated_bonus+"</span>";
+					$id("all_price").innerHTML = order_obj.formated_order_amount;					
 					//收货人信息
 					$id("address_id").innerHTML = "收货人："+order_obj.consignee+"<br/>详细地址："+
 					order_obj.country_name+'-'+order_obj.province_name+'-'+order_obj.city_name+'-'+order_obj.district_name+'-'+
@@ -198,31 +110,14 @@
 	}
 	//parseParam();
 	var indent_id = 0;
-	/*window.uexOnload = function(){
-		uexXmlHttpMgr.onData = httpSuccess;
-		var indent_detail_url = httpUrl+"user.php?jsoncallback=?&act=order_detail&order_id="+indent_id;
-		xmlHttp(1,indent_detail_url);
-		uexPay.onStatus = paySuccess;
-		uexWidgetOne.cbError = function(opCode, errorCode, errorInfo){
-			uexWindow.alert("提示","errorCode:" + errorCode + "\nerrorInfo:" + errorInfo,"确定");
-		}
-	}*/
 	zy_fix("header","","",function(){
-		//获取参数
-		parseParam();
-		indent_id = params.orderId;
-		
-		uexXmlHttpMgr.onData = httpSuccess;
-		var indent_detail_url = httpUrl+"user.php?jsoncallback=?&act=order_detail&order_id="+indent_id;
-		//alert(indent_detail_url)
-		xmlHttp(1,indent_detail_url);
-		uexPay.onStatus = paySuccess;
-		uexWidgetOne.cbError = function(opCode, errorCode, errorInfo){
-			uexWindow.alert("提示","errorCode:" + errorCode + "\nerrorInfo:" + errorInfo,"确定");
+		//获取参数
+		parseParam();
+		indent_id = params.orderId;
+		uexXmlHttpMgr.onData = httpSuccess;
+		var indent_detail_url = httpUrl+"user.php?jsoncallback=?&act=order_detail&order_id="+indent_id;		xmlHttp(1,indent_detail_url);
+		uexPay.onStatus = paySuccess;
+		uexWidgetOne.cbError = function(opCode, errorCode, errorInfo){
+			uexWindow.alert("提示","errorCode:" + errorCode + "\nerrorInfo:" + errorInfo,"确定");
 		}
-	});
-	
-
-</script>
-</body>
-</html>
+	});</script></body></html>
